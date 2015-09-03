@@ -3,8 +3,9 @@
     "license": "OSL-3.0",
     "type": "magento-module",
     "description": "This module adds the option to duplicate an admin role with all of it's rules.",
-    "require": {
-        "magento-hackathon/magento-composer-installer": "*"
+    "homepage": "https://github.com/sandermangel/ffm-adminpermissions",
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "Allows to manage this package as a dependency"
     },
     "authors":[
         {
