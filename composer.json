@@ -1,5 +1,5 @@
 {
-    "name": "Ffm/Adminpermissions",
+    "name": "ffm/adminpermissions",
     "license": "OSL-3.0",
     "type": "magento-module",
     "description": "This module adds the option to duplicate an admin role with all of it's rules.",
