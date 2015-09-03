@@ -82,7 +82,7 @@ class Ffm_Adminpermissions_Adminhtml_Adminpermissions_DuplicateController extend
             }
 
             $newRole->save();
-            
+
             Mage::getModel('admin/rules')
                 ->setRoleId($newRole->getId())
                 ->setResources($ruleCollection->getColumnValues('resource_id'))
