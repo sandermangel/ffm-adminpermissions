@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffm_Adminpermissions extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_Adminpermissions
+ * @copyright      Copyright (c) FitForMe B.V. 2015
+ * @license        http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <ffm_adminpermissions translate="title" module="ffm_adminpermissions">
+                                        <title>Adminpermissions</title>
+                                    </ffm_adminpermissions>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <ffm_adminpermissions translate="title" module="ffm_adminpermissions">
+                        <title>Adminpermissions</title>
+                        <children>
+                            <duplicate translate="title" module="ffm_adminpermissions">
+                                <title>Duplicate</title>
+                                <sort_order>0</sort_order>
+                            </duplicate>
+                        </children>
+                    </ffm_adminpermissions>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <ffm_adminpermissions translate="title" module="ffm_adminpermissions">
+            <title>Adminpermissions</title>
+            <sort_order>5</sort_order>
+            <children>
+                <duplicate translate="title" module="ffm_adminpermissions">
+                    <title>Duplicate</title>
+                    <action>adminhtml/adminpermissions_duplicate</action>
+                    <sort_order>0</sort_order>
+                </duplicate>
+            </children>
+        </ffm_adminpermissions>
+    </menu>
+</config>

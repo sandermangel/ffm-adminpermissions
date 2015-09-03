@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffm_Adminpermissions extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_Adminpermissions
+ * @copyright      Copyright (c) FitForMe B.V. 2015
+ * @license        http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
+ */
+-->
+<config>
+    <modules>
+        <Ffm_Adminpermissions>
+            <version>1.0.0</version>
+        </Ffm_Adminpermissions>
+    </modules>
+    <global>
+        <helpers>
+            <ffm_adminpermissions>
+                <class>Ffm_Adminpermissions_Helper</class>
+            </ffm_adminpermissions>
+        </helpers>
+        <models>
+            <ffm_adminpermissions>
+                <class>Ffm_Adminpermissions_Model</class>
+            </ffm_adminpermissions>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <core_block_abstract_prepare_layout_after>
+                <observers>
+                    <ffm_adminpermissions_core_block_abstract_prepare_layout_after>
+                        <class>Ffm_Adminpermissions_Model_Observer</class>
+                        <method>coreBlockAbstractPrepareLayoutAfter</method>
+                    </ffm_adminpermissions_core_block_abstract_prepare_layout_after>
+                </observers>
+            </core_block_abstract_prepare_layout_after>
+        </events>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ffm_Adminpermissions before="Mage_Adminhtml">Ffm_Adminpermissions_Adminhtml</Ffm_Adminpermissions>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ffm_Adminpermissions>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Admin />
+            </depends>
+        </Ffm_Adminpermissions>
+    </modules>
+</config>
