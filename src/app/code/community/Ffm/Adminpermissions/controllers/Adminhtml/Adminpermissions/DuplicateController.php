@@ -61,7 +61,8 @@ class Ffm_Adminpermissions_Adminhtml_Adminpermissions_DuplicateController extend
 
             $ruleCollection = Mage::getModel('admin/rules')->getCollection()
                 ->addFieldToSelect('resource_id')
-                ->addFieldToFilter('role_id',$role->getId());
+                ->addFieldToFilter('role_id',$role->getId())
+                ->addFieldToFilter('permission','allow');
 
             if (!$ruleCollection->getSize()) {
                 throw new Exception(Mage::helper('ffm_adminpermissions')->__('Role has no rules'));
@@ -81,7 +82,7 @@ class Ffm_Adminpermissions_Adminhtml_Adminpermissions_DuplicateController extend
             }
 
             $newRole->save();
-
+            
             Mage::getModel('admin/rules')
                 ->setRoleId($newRole->getId())
                 ->setResources($ruleCollection->getColumnValues('resource_id'))
